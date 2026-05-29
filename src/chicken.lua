@@ -12,7 +12,7 @@ function Chicken.new(x,y)
         isJumping = false,
         jumpTimer = 0,
         jumpDuration = 0.5, -- seconds for full jump arc
-        jumpHeight = 100,   -- pixels high at peak
+        jumpHeight = 150,   -- pixels high at peak
     }
 end
 
@@ -42,7 +42,7 @@ function Chicken.load(chicken)
 end
 
 function Chicken.update(chicken, dt)
-    chicken.isMoving = false
+    chicken.isMoving = false  
 
     -- Move RIGHT (right arrow)
     if love.keyboard.isDown("right") then

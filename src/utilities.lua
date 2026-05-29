@@ -33,4 +33,15 @@ function Utils.updateAnimation(animationSettings, dt)
     end
 end
 
+-- Check for collision
+function Utils.checkCollision(entityA, entityB)
+    local dx = entityA.x - entityB
+    local dy = entityA.y - entityB
+    local distance = math.sqrt(dx*dx + dy*dy)
+
+    if distance < entityA.size + entityB.size then
+        return true
+    end
+end
+
 return Utils
